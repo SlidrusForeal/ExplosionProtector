@@ -1,0 +1,8 @@
+name: ExplosionProtector
+version: '1.0'
+main: org.SlidrusForeal.explosionProtector.ExplosionProtector
+api-version: '1.21'
+authors: [ "SlidrusForeal" ]
+depend: [CoreProtect]
+description: Protects your server from explosions using  coreprotect database
+website: https://sosmark.netlify.app/
