@@ -40,12 +40,6 @@ The plugin utilizes the **CoreProtect API** to determine the origin of a block a
 
 ---
 
-## 📂 Project Structure
-
-ExplosionProtector/ ├── src/ │ └── org/ │ └── SlidrusForeal/ │ └── explosionProtector/ │ └── ExplosionProtector.java ├── plugin.yml └── README.md
-
----
-
 ## 📋 Usage Example
 
 A player builds a house → a creeper explodes nearby → the house remains intact because the blocks were manually placed by the player.
