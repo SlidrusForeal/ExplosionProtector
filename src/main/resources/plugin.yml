@@ -5,4 +5,7 @@ api-version: '1.21'
 authors: [ "SlidrusForeal" ]
 depend: [CoreProtect]
 description: Protects your server from explosions using  coreprotect database
-website: https://sosmark.netlify.app/
+commands:
+  explosionprotector:
+    description: Manage the ExplosionProtector plugin.
+    usage: /explosionprotector <enable|disable|stats|cache>
