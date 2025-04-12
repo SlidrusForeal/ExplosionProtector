@@ -1,91 +1,80 @@
 # 💣 ExplosionProtector
 
-**Защита построек от взрывов, если блок был поставлен игроком**  
-Плагин для Minecraft (Spigot/Paper), использующий CoreProtect для защиты построек от разрушения взрывами TNT, криперов и других сущностей.
+**Protects structures from explosions if the block was placed by a player**  
+A plugin for Minecraft (Spigot/Paper) that uses CoreProtect to prevent explosions from destroying blocks.
 
 ---
 
-## 🧠 Описание
+## 🧠 Description
 
-`ExplosionProtector` предотвращает разрушение блоков, которые были **поставлены игроками**, при взрывах. Это удобно на PvE-серверах или творческих мирах, где важно сохранять постройки игроков.
+`ExplosionProtector` prevents blocks that were **placed by players** from being destroyed during explosions. This is especially useful on PvE servers or creative worlds where preserving player constructions is important.
 
-Плагин использует **CoreProtect API** для определения происхождения блока и исключает из взрыва только те, которые действительно были размещены вручную.
-
----
-
-## ⚙️ Как работает
-
-- При взрыве (TNT, крипер, блок) проверяется список затронутых блоков.
-- Каждый блок анализируется через CoreProtect:
-  - Если блок был **поставлен игроком** (и не системным источником, вроде WorldEdit), он защищается от разрушения.
-  - TNT блоки всегда разрешены к взрыву.
-- Остальные блоки могут быть разрушены как обычно.
+The plugin utilizes the **CoreProtect API** to determine the origin of a block and excludes only those blocks that were manually placed by a player from being affected by explosions.
 
 ---
 
-## 🧱 Зависимости
+## ⚙️ How It Works
+
+- When an explosion occurs (TNT, creeper, or block explosion), the affected blocks are checked.
+- Each block is analyzed using the CoreProtect API:
+  - If the block was **placed by a player** (and not by a system process, such as WorldEdit), it is protected from destruction.
+  - TNT blocks are always allowed to explode.
+- Other blocks are destroyed as normal.
+
+---
+
+## 🧱 Dependencies
 
 - [✅] **Spigot / Paper** (1.13+)
-- [✅] **CoreProtect** (v10 или выше)
+- [✅] **CoreProtect** (v10 or higher)
 
 ---
 
-## 🚀 Установка
+## 🚀 Installation
 
-1. Убедитесь, что **CoreProtect** установлен и активен.
-2. Скачайте `ExplosionProtector.jar` и поместите в папку `plugins/`.
-3. Перезапустите сервер.
-4. Убедитесь, что в логах написано:
-   ```
-   [ExplosionProtector] Плагин успешно активирован!
-   ```
+1. Make sure **CoreProtect** is installed and active.
+2. Download the `ExplosionProtector.jar` file and place it in the `plugins/` folder.
+3. Restart your server.
+4. Check your logs for the message:
+[ExplosionProtector] Plugin successfully enabled!
 
 ---
 
-## 📂 Структура проекта
+## 📂 Project Structure
 
-```
-ExplosionProtector/
-├── src/
-│   └── org/
-│       └── SlidrusForeal/
-│           └── explosionProtector/
-│               └── ExplosionProtector.java
-├── plugin.yml
-└── README.md
-```
+ExplosionProtector/ ├── src/ │ └── org/ │ └── SlidrusForeal/ │ └── explosionProtector/ │ └── ExplosionProtector.java ├── plugin.yml └── README.md
 
 ---
 
-## 📋 Пример использования
+## 📋 Usage Example
 
-Игрок построил дом → рядом взрывается крипер → дом остаётся целым, если блоки были поставлены игроком вручную.
-
----
-
-## 🔐 Безопасность и производительность
-
-- Защита от взрывов производится только по списку затронутых блоков.
-- Используется безопасная обёртка вокруг CoreProtect API.
-- Плагин не сохраняет никаких данных и не создаёт нагрузку на сервер при нормальной интенсивности взрывов.
+A player builds a house → a creeper explodes nearby → the house remains intact because the blocks were manually placed by the player.
 
 ---
 
-## 🛠 Поддержка и предложения
+## 🔐 Safety and Performance
 
-Нашёл баг? Хочешь предложить новую функцию (например, настройку типов блоков в `config.yml`)?  
-Создай Issue или Pull Request!
+- The protection mechanism is applied only to the list of blocks affected by an explosion.
+- A safe wrapper around the CoreProtect API is used.
+- The plugin does not store any data or impose additional load on the server under normal conditions.
 
 ---
 
-## 🏆 Автор
+## 🛠 Support and Suggestions
 
-Разработано с любовью к стабильности и порядку:  
+Found a bug? Want to propose a new feature (for example, configuring which block types to protect in `config.yml`)?  
+Please create an Issue or a Pull Request!
+
+---
+
+## 🏆 Author
+
+Developed with a passion for stability and order by:  
 **SlidrusForeal**  
-[GitHub](https://github.com/SlidrusForeal) • [SpigotMC](https://www.spigotmc.org/members/)
+[GitHub](https://github.com/SlidrusForeal)
 
 ---
 
-## 📜 Лицензия
+## 📜 License
 
-MIT License — используй, дорабатывай, распространяй.
+MIT License — Feel free to use, modify, and distribute.
