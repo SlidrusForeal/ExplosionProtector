@@ -2,6 +2,12 @@ name: ExplosionProtector
 version: '1.0'
 main: org.SlidrusForeal.explosionProtector.ExplosionProtector
 api-version: '1.21'
-authors: [ "SlidrusForeal" ]
-depend: [CoreProtect]
-description: Protects your server from explosions using  coreprotect database
+depend:
+  - CoreProtect
+
+commands:
+  ep:
+    description: ExplosionProtector commands (status, info, language)
+    usage: /ep <status|info|language>
+    aliases:
+      - explosionprot

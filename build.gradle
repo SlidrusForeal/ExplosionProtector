@@ -15,7 +15,7 @@ repositories {
     maven {
         name = "playpro"
         url = "https://maven.playpro.com/"
-    } // <-- ДОБАВЬТЕ ЭТОТ РЕПОЗИТОРИЙ
+    }
     maven {
         name = "sonatype"
         url = "https://oss.sonatype.org/content/groups/public/"
@@ -23,6 +23,7 @@ repositories {
 }
 
 dependencies {
+    compileOnly "org.bstats:bstats-bukkit:3.0.1"
     compileOnly("io.papermc.paper:paper-api:1.21-R0.1-SNAPSHOT")
     compileOnly "net.coreprotect:coreprotect:22.4"
 }
